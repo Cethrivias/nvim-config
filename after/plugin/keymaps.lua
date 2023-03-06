@@ -10,6 +10,14 @@ vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'Paste without overriding curr
 
 vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format() end, { desc = 'Format' })
 
+vim.keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clears search hightlight' })
+
+-- tabs
+vim.keymap.set('n', '<leader>tn', ':tabnew<cr>', { desc = 'New tab' })
+vim.keymap.set('n', '<leader>tq', ':tabclose<cr>', { desc = 'Close tab' })
+vim.keymap.set('n', '<leader>th', ':tabn<cr>', { desc = 'Previous tab' })
+vim.keymap.set('n', '<leader>tl', ':tabp<cr>', { desc = 'Next tab' })
+
 -- Plugins
 -- -- Window Picker
 vim.keymap.set("n", "<leader>v", function()
