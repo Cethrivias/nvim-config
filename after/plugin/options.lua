@@ -5,6 +5,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "120"
 vim.opt.wrap = false
 vim.opt.updatetime = 50
+
 -- split
 vim.opt.splitright = true
 vim.opt.splitbelow = true
