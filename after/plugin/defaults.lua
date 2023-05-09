@@ -1,2 +1,2 @@
 -- neo-tree
-require('neo-tree.command')._command()
+-- require('neo-tree.command')._command()
