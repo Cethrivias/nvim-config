@@ -3,7 +3,8 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "120"
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.updatetime = 50
 
 -- split
