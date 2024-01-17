@@ -26,7 +26,6 @@ return {
                     'html',
                     'rust',
                     'sql',
-                    'templ',
                     'terraform',
                     'toml',
                     'typescript',
