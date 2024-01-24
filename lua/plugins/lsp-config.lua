@@ -70,6 +70,7 @@ return {
             'williamboman/mason-lspconfig.nvim',
         },
         config = function()
+            require('neodev').setup()
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
@@ -85,7 +86,6 @@ return {
                     }
                 end,
             }
-            require('neodev').setup()
         end,
     },
 }
