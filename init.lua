@@ -17,3 +17,6 @@ require('lazy').setup 'plugins'
 
 require 'scripts'
 require 'keymaps'
+
+-- vim.cmd.colorscheme 'catppuccin'
+vim.cmd.colorscheme 'tokyonight-night'
