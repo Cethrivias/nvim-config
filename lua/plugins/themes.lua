@@ -1,10 +1,17 @@
 return {
-    {
-        'folke/tokyonight.nvim',
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
+    -- {
+    --     'projekt0n/github-nvim-theme',
+    --     name = 'github-theme',
+    --     opts = {}
+    -- },
+    -- {
+    --     'navarasu/onedark.nvim',
+    --     opts = { style = 'darker' },
+    -- },
+    -- {
+    --     'folke/tokyonight.nvim',
+    --     opts = {},
+    -- },
     {
         'catppuccin/nvim',
         name = 'catppuccin',
