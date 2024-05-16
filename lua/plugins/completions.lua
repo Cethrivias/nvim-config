@@ -65,6 +65,12 @@ return {
                     { name = 'buffer' },
                 }),
             }
+
+            local fmt = require('luasnip.extras.fmt').fmt
+            local snippets = require('luasnip')
+            snippets.add_snippets("cs", {
+                luasnip.snippet("newguid", fmt("Guid.NewGuid()", {}))
+            })
         end,
     },
 }

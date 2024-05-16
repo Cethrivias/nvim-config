@@ -14,6 +14,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.listchars = "eol:$,tab:> ,nbsp:+,extends:>,precedes:<,space:·"
 
+vim.opt.spell = true
+vim.opt.spelloptions = "camel"
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
