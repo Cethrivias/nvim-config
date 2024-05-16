@@ -24,7 +24,7 @@ vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 -- editor
@@ -35,6 +35,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.colorcolumn = '120'
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'line'
+vim.opt.wrap = false
 
 -- split
 vim.opt.splitright = true

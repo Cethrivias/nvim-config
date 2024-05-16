@@ -1,9 +1,9 @@
 return {
-    -- {
-    --     'projekt0n/github-nvim-theme',
-    --     name = 'github-theme',
-    --     opts = {}
-    -- },
+    {
+        'projekt0n/github-nvim-theme',
+        name = 'github-theme',
+        opts = {}
+    },
     -- {
     --     'navarasu/onedark.nvim',
     --     opts = { style = 'darker' },
