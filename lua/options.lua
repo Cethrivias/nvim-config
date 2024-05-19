@@ -16,6 +16,7 @@ vim.opt.listchars = "eol:$,tab:> ,nbsp:+,extends:>,precedes:<,space:·"
 
 vim.opt.spell = true
 vim.opt.spelloptions = "camel"
+vim.opt.spellcapcheck = ""
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '

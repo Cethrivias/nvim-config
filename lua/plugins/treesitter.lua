@@ -1,3 +1,56 @@
+local langs = {
+    'bash',
+    'c',
+    'lua',
+    'vim',
+    'vimdoc',
+    'query',
+    'c',
+    'c_sharp',
+    'cpp',
+    'css',
+    'csv',
+    'git_rebase',
+    'gitcommit',
+    'gitignore',
+    'go',
+    'javascript',
+    'json',
+    'html',
+    'rust',
+    'sql',
+    'terraform',
+    'toml',
+    'typescript',
+}
+
+local function add_queries()
+    local queries = '; inherits: %s\n\n(identifier) @spell'
+    local queries_dir = 'after/queries/'
+
+    for _, lang in ipairs(langs) do
+        local path = queries_dir .. lang .. '/highlights.scm'
+        local file = io.open(path, 'r')
+
+        if file then
+            file:close()
+            goto continue
+        end
+
+        os.execute('mkdir -p ' .. queries_dir .. lang)
+
+        file = io.open(path, 'w')
+        if not file then
+            print('Could not extend queries for ' .. lang .. ' file: ' .. path)
+            goto continue
+        end
+
+        file:write(string.format(queries, lang))
+        file:close()
+        ::continue::
+    end
+end
+
 return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -5,31 +58,7 @@ return {
         -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
         vim.defer_fn(function()
             require('nvim-treesitter.configs').setup {
-                ensure_installed = {
-                    'bash',
-                    'c',
-                    'lua',
-                    'vim',
-                    'vimdoc',
-                    'query',
-                    'c',
-                    'c_sharp',
-                    'cpp',
-                    'css',
-                    'csv',
-                    'git_rebase',
-                    'gitcommit',
-                    'gitignore',
-                    'go',
-                    'javascript',
-                    'json',
-                    'html',
-                    'rust',
-                    'sql',
-                    'terraform',
-                    'toml',
-                    'typescript',
-                },
+                ensure_installed = langs,
                 auto_install = false,
                 sync_install = false,
 
@@ -93,6 +122,7 @@ return {
                     },
                 },
             }
+            add_queries()
         end, 0)
     end,
 }
