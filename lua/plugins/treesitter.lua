@@ -26,7 +26,7 @@ local langs = {
 
 local function add_queries()
     local queries = '; inherits: %s\n\n(identifier) @spell'
-    local queries_dir = 'after/queries/'
+    local queries_dir = vim.fn.stdpath('config') .. '/after/queries/'
 
     for _, lang in ipairs(langs) do
         local path = queries_dir .. lang .. '/highlights.scm'
