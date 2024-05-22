@@ -1,3 +1,2 @@
 ; inherits: gitcommit
 
-(identifier) @spell
