@@ -1,3 +1,2 @@
 ; inherits: vim
 
-(identifier) @spell

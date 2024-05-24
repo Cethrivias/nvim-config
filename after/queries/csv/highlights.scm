@@ -1,3 +1,2 @@
 ; inherits: csv
 
-(identifier) @spell

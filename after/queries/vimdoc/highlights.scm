@@ -1,3 +1,2 @@
 ; inherits: vimdoc
 
-(identifier) @spell

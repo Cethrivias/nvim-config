@@ -71,6 +71,17 @@ return {
             snippets.add_snippets("cs", {
                 luasnip.snippet("newguid", fmt("Guid.NewGuid()", {})),
                 luasnip.snippet("aaa", fmt("// Arrange\n\n// Act\n\n// Assert", {})),
+                luasnip.snippet("testa", fmt(
+                    "[Test]\n"
+                    .. "public async Task {}()\n"
+                    .. "{{\n"
+                    .. "    // Arrange\n"
+                    .. "    {}\n"
+                    .. "    // Act\n\n"
+                    .. "    // Assert\n\n"
+                    .. "}}",
+                    { luasnip.insert_node(1), luasnip.insert_node(0) }
+                ))
             })
         end,
     },
