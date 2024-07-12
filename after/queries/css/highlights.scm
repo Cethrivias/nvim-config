@@ -1,3 +1,2 @@
 ; inherits: css
 
-(identifier) @spell

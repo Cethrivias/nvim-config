@@ -1,3 +1,2 @@
 ; inherits: gitignore
 
-(identifier) @spell

@@ -1,3 +1,2 @@
 ; inherits: rust
 
-(identifier) @spell

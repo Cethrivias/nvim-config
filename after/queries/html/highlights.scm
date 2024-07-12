@@ -1,3 +1,2 @@
 ; inherits: html
 
-(identifier) @spell
