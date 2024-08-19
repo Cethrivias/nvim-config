@@ -10,27 +10,9 @@ return {
     config = function()
         require('neo-tree').setup()
 
-        vim.keymap.set('n', '<leader>3', function()
-            local path = vim.fn.expand '%:p'
-            local readable = vim.fn.filereadable(path)
-            print(path .. readable)
-        end, { desc = 'Show file tree', expr = true })
-        vim.keymap.set('n', '<leader>1', function()
-            local path = vim.fn.expand '%:p'
-            if vim.fn.filereadable(path) == 0 then
-                return ':Neotree toggle<cr>'
-            else
-                return ':Neotree toggle reveal_file=' .. path .. '<cr>'
-            end
-        end, { desc = 'Show file tree', expr = true })
-        vim.keymap.set('n', '<leader>2', function()
-            local path = vim.fn.expand '%:p'
-            if vim.fn.filereadable(path) == 0 then
-                return ':Neotree position=current<cr>'
-            else
-                return ':Neotree position=current reveal_file=' .. path .. '<cr>'
-            end
-        end, { desc = 'Show file tree in a current window', expr = true })
+        vim.keymap.set('n', '<leader>1', '<cmd>Neotree toggle reveal<cr>', { desc = 'Show file tree' })
+        vim.keymap.set('n', '<leader>2', '<cmd>Neotree current reveal<cr>', { desc = 'Show file tree in a current window' })
+        vim.keymap.set('n', '<leader>3', '<cmd>Neotree current buffers reveal<cr>', { desc = 'Show file tree' })
     end,
 }
 
